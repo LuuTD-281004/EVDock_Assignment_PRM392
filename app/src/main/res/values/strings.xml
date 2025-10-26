@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Assignment</string>
+    <string name="login_title">EVDock</string>
+    <string name="login_subtitle">Đăng nhập vào tài khoản của bạn</string>
+    <string name="hint_email">Nhập email của bạn</string>
+    <string name="hint_password">Nhập mật khẩu</string>
+    <string name="btn_login">Đăng nhập</string>
+    <string name="test_accounts_label">Tài khoản test (Nhấn để điền)</string>
+    <string name="btn_evmstaff">EVM Staff - evmstaff@gmail.com</string>
+    <string name="btn_dealerstaff">Dealer Staff - dealerstaff@gmail.com</string>
+    <string name="btn_managertaff">Dealer Manager - john.doe@email.com</string>
+    <string name="hi">Xin Chào</string>
+    <string name="catalog_page">Catalog Page</string>
+    <string name="catalog_greeting">Xin chào %1$s — Đây là trang Catalog</string>
+    <string name="order_page">Order Page</string>
+    <string name="order_greeting">Xin chào %1$s — Đây là trang Order</string>
+    <string name="order_manager_page">Order Manager Page</string>
+    <string name="order_manager_greeting">Xin chào %1$s — Đây là trang quản lí Order</string>
+    <string name="btn_logout">Đăng xuất</string>
 </resources>
