@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,6 +16,18 @@
         <activity android:name=".OrderActivity" />
         <activity android:name=".OrderManagerActivity" />
         <activity android:name=".CatalogActivity" />
+        <activity android:name=".QuotationFormActivity" />
+        <activity android:name=".QuotationDetailActivity" />
+        <activity android:name=".QuotationListActivity" />
+        <activity android:name=".OrderRestockManagementActivity" />
+        <activity android:name=".OrderRestockDetailActivity" />
+        <activity android:name=".StockManagementActivity" />
+        <activity android:name=".CreateStockActivity" />
+        <activity android:name=".EditStockActivity" />
+        <activity android:name=".StockDetailActivity" />
+        <activity android:name=".OrderRestockManagerActivity" />
+        <activity android:name=".OrderRestockManagerCreateActivity" />
+        <activity android:name=".OrderRestockManagerDetailActivity" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">

@@ -16,49 +16,56 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
-            android:title="@string/catalog_page"
+            android:title="Restock Orders"
             app:menu="@menu/menu_logout" />
-
-        <TextView
-            android:id="@+id/headerSubtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textColor="#666666"
-            android:textSize="14sp"
-            android:layout_marginBottom="12dp" />
-
-        <Button
-            android:id="@+id/btnOpenQuotations"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Manage Quotations"
-            android:layout_marginBottom="12dp" />
 
         <EditText
             android:id="@+id/searchInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Search vehicles"
+            android:hint="Search orders"
             android:padding="12dp"
             android:background="@android:drawable/edit_text"
             android:imeOptions="actionSearch"
             android:layout_marginBottom="12dp" />
 
         <Spinner
-            android:id="@+id/versionSpinner"
+            android:id="@+id/statusSpinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp" />
 
-        <TextView
-            android:id="@+id/resultCount"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="0 results"
-            android:textColor="#666666"
-            android:textSize="12sp"
-            android:layout_marginBottom="8dp" />
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/totalOrdersText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Total: 0"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/pendingOrdersText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pending: 0"
+                android:textColor="#666666" />
+
+            <TextView
+                android:id="@+id/approvedOrdersText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Approved: 0"
+                android:textColor="#666666" />
+        </LinearLayout>
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/swipeRefresh"
@@ -71,7 +78,7 @@
                 android:layout_height="match_parent">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/vehicleRecyclerView"
+                    android:id="@+id/ordersRecyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:clipToPadding="false"
@@ -81,7 +88,7 @@
                     android:id="@+id/emptyView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="No vehicles found"
+                    android:text="Không có dữ liệu"
                     android:textColor="#888888"
                     android:textSize="16sp"
                     android:layout_gravity="center"
@@ -96,6 +103,16 @@
                     android:visibility="gone" />
             </FrameLayout>
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            app:srcCompat="@android:drawable/ic_input_add" />
     </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
